@@ -4,10 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>AdminLTE 2 | Boxed Layout</title>
+    <title>@yield('titulo','Biblioteca') | SIGESA</title>
     <!-- Tell the browser to be responsive to screen width -->
-
-
 
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.7 -->
@@ -47,10 +45,9 @@
         <div class="content-wrapper">
             <!-- Content Header (Page header) -->
             <section class="content">
-                <!--  @@yield('contenido')-->
-                <h1>Tirulo de la pagina
-                    <small>blanc o subtruoo</small>
-                </h1>
+                <!--  @-->
+                @yield('contenido')
+                
             </section>
         </div>
         <!--Inicio Footer -->
@@ -67,14 +64,16 @@
     <!-- AdminLTE App -->
     <script src="{{asset("assets/$theme/dist/js/adminlte.min.js")}}"></script>
     <!-- AdminLTE for demo purposes 
-    ♠@@yield("scriptsPlugins")-->
+    ♠@-->
+    @yield("scriptsPlugins")
     <script src="{{asset("assets/js/jquery-validation/jquery.validate.min.js")}}"></script>
     <script src="{{asset("assets/js/jquery-validation/localization/messages_es.min.js")}}"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     <script src="{{asset("assets/js/scripts.js")}}"></script>
     <script src="{{asset("assets/js/funciones.js")}}"></script>
-    <!-- @@yield("scripts")-->
+    <!-- @-->
+    @yield("scripts")
 </body>
 
 </html>

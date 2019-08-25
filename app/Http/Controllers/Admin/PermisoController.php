@@ -4,8 +4,9 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Admin\Permiso;
 
-class RolController extends Controller
+class PermisoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +15,9 @@ class RolController extends Controller
      */
     public function index()
     {
-        //
+         
+        $permisos=Permiso::orderBy('id')->get();
+        return view('admin.permiso.index',compact('permisos'));
     }
 
     /**
@@ -22,9 +25,10 @@ class RolController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function crear()
     {
-        //
+        //return('hola crear');
+         return view('admin.permiso.crear');
     }
 
     /**
